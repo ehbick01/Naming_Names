@@ -113,7 +113,7 @@ zip.df <- subset(zip.df, ZCTA5CE10 == '40219')
 jeffMall <- geocode('4801 Outer Loop, Louisville, KY 40219') # Grab Jefferson Mall geoinfo for comparison
 
 ggplot() +
-  geom_path(data = zip.df, aes(x=long, y=lat), size = 1, alpha = 0.25, color = 'Light Grey') +
+  geom_path(data = zip.df, aes(x=long, y=lat), size = 1, alpha = 0.25, color = 'Dark Grey') +
   geom_point(data = coords40219, aes(x = lon, y = lat), alpha = 0.05, color = '#92151D') +
   geom_point(data = jeffMall, aes(x = lon, y = lat), color = 'Black', size = 3.25) +
   geom_text(data = jeffMall, aes(x = lon, y = lat, label = 'Jefferson Mall'), hjust = -0.0625, vjust = 1.025, size = 3) +
