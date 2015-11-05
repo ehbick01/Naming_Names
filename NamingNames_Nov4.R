@@ -110,7 +110,7 @@ zip.df <- join(zip.df, zip@data, by="id")
 zip.df <- subset(zip.df, ZCTA5CE10 == '40219')
 
 # Plot location of food-related complaints in 40219
-jeffMall <- geocode('	4801 Outer Loop, Louisville, KY 40219')
+jeffMall <- geocode('4801 Outer Loop, Louisville, KY 40219') # Grab Jefferson Mall geoinfo for comparison
 
 ggplot() +
   geom_path(data = zip.df, aes(x=long, y=lat), size = 1, alpha = 0.25, color = 'Light Grey') +
